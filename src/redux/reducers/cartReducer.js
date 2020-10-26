@@ -26,11 +26,10 @@ export default function cartReducer(state=initialState.default.cart,action){
             } 
 
             case actionTypes.REMOVE_FROM_CARD:
+                // console.log(state[0].product.id)
+                // console.log(action)
                 const newState2=state.filter(item=>item.product.id!== action.payload.id)
                 return newState2
-
-
-
 
         default:
            

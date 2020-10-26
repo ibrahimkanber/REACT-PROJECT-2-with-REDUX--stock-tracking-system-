@@ -7,6 +7,7 @@ export function addToCart(cartItem){
     }
 }
 export function removeFromCart(product){
+    console.log(product)
     return{
         type: actionTypes.REMOVE_FROM_CARD,
         payload:product

@@ -27,9 +27,9 @@ class CartSummary extends Component {
         )
     }
 
-    removeItemFromCart(cartItem){
-        this.props.removeFromCart(cartItem.product)
-    }
+    // removeItemFromCart(cartItem){
+    //     this.props.removeFromCart(cartItem.product)
+    // }
   
 
     renderSummary() {
@@ -45,7 +45,7 @@ class CartSummary extends Component {
                     {
                         this.props.cart.map(item => (
                             <DropdownItem>
-                                 <Badge color="danger" onClick={()=>this.removeItemFromCart(item.product)} >X</Badge>
+                                 <Badge color="danger" onClick={()=>this.props.removeFromCart(item.product)} >X</Badge>
                                 {item.product.productName}
                                 <Badge color="success">{item.quantity}</Badge>
                             </DropdownItem>
