@@ -2,7 +2,9 @@ import React from 'react'
 import { Label } from 'reactstrap'
 
 function SelectInput({ name, label, onChange, defaultOption, error, value, options
+    
 }) {
+    console.log(options)
     return (
         <div className="form-group">
             <label htmlfor="name">{label} </label>

@@ -25,10 +25,12 @@ function AddOrUpdateProduct({
   //////
   function handleChange(event) {
     const { name, value } = event.target;
+    // console.log(name)
     setProduct((previousProduct) => ({
       ...previousProduct,
       [name]: name === "categoryId" ? parseInt(value, 10) : value,
     }));
+   
   }
   ///
   function handleSave(event) {
@@ -37,7 +39,8 @@ function AddOrUpdateProduct({
       history.push("/");
     });
   }
-
+ 
+  // console.log(product)
   return (
     <div>
       <ProductDetails
@@ -54,7 +57,7 @@ const mapDispatchToProps = { getCategories, saveProduct };
 
 function mapStateToProps(state, ownProps) {
   console.log(state);
-  console.log(ownProps);
+  // console.log(ownProps);
   const productId = ownProps.match.params.productId;
   const product =
     productId && state.productListReducer.length > 0
@@ -69,7 +72,7 @@ function mapStateToProps(state, ownProps) {
 }
 
 export function getProductById(products, productId) {
-  let product = products.find((product) => product.id === productId) || null;
+  let product = products.find((product) => product.id == productId) || null;
   return product;
 }
 
