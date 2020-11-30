@@ -1,4 +1,11 @@
+![Shop](https://user-images.githubusercontent.com/65809527/100654917-d3445780-334a-11eb-968d-bf0e40986e8b.gif)
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
 
 ## Available Scripts
 
